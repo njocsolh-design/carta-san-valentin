@@ -1,17 +1,22 @@
 body {
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 20px;
   background: radial-gradient(circle, #1a001a, #000);
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: Arial, sans-serif;
   color: white;
+  box-sizing: border-box;
 }
+
 
 .container {
   text-align: center;
   animation: aparecer 2s ease;
+  width: 100%;
+  max-width: 500px;
 }
 
 h1 {
@@ -42,6 +47,21 @@ p {
 @keyframes caer {
   to {
     transform: translateY(110vh) rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  p {
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  .rosa {
+    font-size: 60px;
   }
 }
 
